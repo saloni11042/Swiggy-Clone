@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>Yummy</title>
+  </head>
+  <body>
+    <!-- landing page navbar -->
+    <div class="main">
+      <div class="left">
+        <nav>
+          <div class="logo">
+            <img src="./images/y-removebg-preview.png" alt="" />
+            <span class="head-title">YUMMY</span>
+          </div>
+          <div class="bttn">
+            <button id="login" class="login" onclick="openLogin()">
+              Login
+            </button>
+            <button id="signup" class="signup" onclick="openSignup()">
+              Sign up
+            </button>
+          </div>
+        </nav>
+        <br /><br />
+        <div id="overlay"></div>
+        <!-- login page -->
+        <main class="login-page-main animate" id="login-page-main">
+          <div class="login-content">
+            <span class="close cancelbtn animate-reverse" onclick="closeLogin()"
+              >&times;</span>
+            <div class="log-head">
+              <div class="login-page-top">
+                <div class="inline-text">
+                  <div class="log-text">Login</div>
+                  <div>
+                    or <span class="login-text"><button class="sign-up-btn" onclick="openSignup()">create an account</button></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="login-page-thumbnail inline-text"
+                  src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
+                  alt=""/>
+              </div>
+            </div>
+            <!-- login-->
+            <form class="needs-validation" action="home.html" novalidate>
+              <div class="form-floating mb-3">
+                <input type="tel" pattern="^[7-9]\d{9}$" class="form-control" id="validationCustom01" placeholder="Phone number" required>
+                <label class="validationCustom01" for="validationCustom01">Phone number</label>
+                <div class="invalid-feedback">
+                  Please enter your phone number!
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="login-page-btn" type="submit">Login</button>
+              </div>
+            </form>
+            <div class="login-page-terms">
+              By clicking on Login, I accept the
+              <a href="">Terms & Conditions</a>
+              &
+              <a href="">Privacy Policy</a>
+            </div>
+          </div>
+        </main>
+        <!-- signup page -->
+        <main class="signup-page-main animate" id="signup-page-main">
+          <div class="signup-content">
+            <span class="close cancelbtn animate-reverse" onclick="closeSignup()">&times;</span>
+            <div class="log-head">
+              <div class="login-page-top">
+                <div class="inline-text">
+                  <div class="log-text">Sign up</div>
+                  <div>or <span class="login-text"><button class="login-btn" onclick="openLogin()">login to your account</button></span></div>
+                </div>
+                <div>
+                  <img class="login-page-thumbnail inline-text" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt=""/>
+                </div>
+              </div>
+            </div>
+          <!-- Sign up -->
+          <form class="needs-validation" action="home.html" novalidate>
+            <div class="form-floating mb-3">
+              <input type="tel" pattern="^[6-9]\d{9}$" class="form-control" id="validationCustom01" placeholder="Phone number" required>
+              <label class="validationCustom01" for="validationCustom01">Phone number</label>
+              <div class="invalid-feedback">
+                Please enter your phone number!
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+              <label class="validationCustom01" for="validationCustom01">Name</label>
+              <div class="invalid-feedback">
+                Please enter your name!
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="validationCustom01" placeholder="Email" required>
+              <label class="validationCustom01" for="validationCustom01">Email</label>
+              <div class="invalid-feedback">
+                Please enter your email!
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="login-page-btn" type="submit">Sign up</button>
+            </div>
+          </form>
+
+          <div class="login-page-terms">
+            By clicking on Login, I accept the
+            <a href="">Terms & Conditions</a>
+            &
+            <a href="">Privacy Policy</a>
+          </div>
+        </div>
+        </main>
+
+        <!-- landing page -->
+        <h1 class="words" id="word">Hungry?</h1>
+        <h2>Order food from favourite restaurants near you.</h2>
+        <br />
+        <br />
+        <div class="location">
+          <form action="" name="myForm">
+          <input type="text" id="locate" class="inp" placeholder="Enter your delivery location" name="text" oninvalid="validateForm(this);" 
+          oninput="validateForm(this);" required/>
+          <button class="bttn1" >
+            <i class="fa-solid fa-location-crosshairs"></i> Locate Me
+          </button>
+          <!-- <button id="submit" class="btn2" onclick="return validateInput()"><a href="">FIND FOOD</a></button> -->
+          <input type="submit" value="FIND FOOD" id="submit" class="btn2" >
+        </form>
+        </div>
+        <br />
+        <h3>POPULAR CITIES IN INDIA</h3>
+        <br />
+        <ul class="city">
+          <li class="odd">Ahmedabad</li>
+          <li class="even">Bangalore</li>
+          <li class="odd">Chennai</li>
+          <li class="even">Delhi</li>
+          <li class="odd">Gurgaon</li>
+          <li class="even">Hyderabad</li>
+          <li class="odd">Kolkata</li>
+          <li class="even">Mumbai</li>
+          <li class="odd">Pune</li>
+          <li class="even">& more.</li>
+        </ul>
+        <br /><br /><br /><br />
+      </div>
+      <div class="photo">
+        <img
+          src="https://cdnb.artstation.com/p/assets/images/images/019/003/189/large/ankit-kashyap-chole-bhature.jpg?1561580848"
+          alt=""
+          class="homepagePhoto"/>
+      </div>
+    </div>
+
+    <div class="card1">
+      <div class="crd">
+        <img src="./images/No_min_order_swiggy.webp" alt="" />
+        <h3>No Minimum Order</h3>
+        <p>
+          Order in for yourself or for the group, with no restrictions on order
+          value
+        </p>
+      </div>
+      <div class="crd">
+        <img src="./images/Live_order_swiggy.webp" alt="" />
+        <h3>Live Order Tracking</h3>
+        <p>
+          Know where your order is at all times, from the restaurant to your
+          doorstep
+        </p>
+      </div>
+      <div class="crd">
+        <br /><br />
+        <img src="./images/Super_fast_delivery_swiggy.webp" alt="" />
+        <h3>Lightning-Fast Delivery</h3>
+        <p>
+          Experience Swiggy's superfast delivery for food delivered fresh & on
+          time
+        </p>
+      </div>
+    </div>
+
+    <div class="rest">
+      <div class="text">
+        <h1>Restaurants in your pocket</h1>
+        <br />
+        <h2>
+          Order from your favorite restaurants & track on the go, with the
+          all-new Swiggy app.
+        </h2>
+        <br /><br />
+        <img src="./images/googleplay_swiggy.webp" alt="" />
+        <img src="./images/app_store_iOS_swiggy.webp" alt="" />
+      </div>
+      <img src="./images/mobile_pixel_swiggy.webp" alt="" class="img1" />
+      <img src="./images/iPhone_swiggy.webp" alt="" class="img2" />
+    </div>
+
+    <div class="footer">
+      <div class="list">
+        <h2>COMPANY</h2>
+        <br />
+        <p>About us</p>
+        <p>Team</p>
+        <p>Careers</p>
+        <p>Yummy Blog</p>
+        <p>Bug Bounty</p>
+        <p>Yummy One</p>
+        <p>Yummy Corporate</p>
+        <p>Yummy Instamart</p>
+        <p>Yummy Genie</p>
+      </div>
+      <div class="list">
+        <h2>CONTACT</h2>
+        <br />
+        <p>Help & Support</p>
+        <p>Partner with us</p>
+        <p>Ride with us</p>
+      </div>
+      <div class="list">
+        <h2>LEGAL</h2>
+        <br />
+        <p>Terms & Conditions</p>
+        <p>Refund & Cancellation</p>
+        <p>Privacy Policy</p>
+        <p>Cookie Policy</p>
+        <p>Offer Terms</p>
+        <p>Phishing & Fraud</p>
+        <p>Corporate – Yummy Money Codes Terms and Conditions</p>
+        <p>Corporate - Yummy Discount Voucher Terms and Conditions</p>
+      </div>
+      <div class="list">
+        <img src="./images/googleplay_swiggy.webp" alt="" />
+        <br />
+        <img src="./images/app_store_iOS_swiggy.webp" alt="" />
+      </div>
+    </div>
+    <hr class="h-ruler">
+    <footer>
+      <div class="logo foot-logo">
+        <img src="./images/y-removebg-preview.png" alt="" />
+        <span class="head-title">YUMMY</span>
+      </div>
+      <div>
+        <h3 class="copyright">&#169;2023 Yummy</h3>
+      </div>
+      <div class="symbol">
+        <ul>
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+          <li><i class="fa-brands fa-pinterest"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/4a9844f496.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

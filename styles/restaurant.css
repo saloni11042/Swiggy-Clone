@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.products{
+    margin: 0px 300px;
+}
+.product{
+    display: flex;
+    justify-content: space-between;
+}
+.text-side{
+    padding-right: 50px;
+}
+.pro-image{
+    border-radius: 6%;
+    height: 107px;
+    width: 135px;
+}
+.add-btn{
+    margin-left: 24px;
+    margin-top: -30px;
+    position: absolute;
+    color: #60b246;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 4%;
+    height: 33px;
+    width: 90px;
+    font-size: 14px;
+}
+
+/* cart */
+
+.cart-container{
+    width: 40vh;
+    border: 1px solid #fc8019;
+}
+#clear-cart{
+    background-color: #fc8019;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+#show-cart{
+    list-style: none;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.plus-item{
+    color: #60b246;
+    background-color: transparent;
+    border: none;
+    vertical-align: top;
+}
+.subtract-item{
+    color: #ff0000;
+    background-color: transparent;
+    border: none;
+    vertical-align: top;
+}
+.delete-item{
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    vertical-align: top;
+}
+.item-count{
+    width: 5%;
+    margin-left: 105px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 30px;
+    vertical-align: top;
+    text-align: center;
+}
+.c_item-name{
+    display: block;
+    width: inherit;
+    margin-left: 105px;
+    margin-top: -50px;
+}
+.c_item-price{
+    width: 500px;
+}
+.c_item-total{
+    padding-left: 0px;
+    padding-right: 50px;
+    overflow-x: auto;
+}
+.c_cart-image{
+    height: 80px;
+    image-rendering: crisp-edges;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.cart-container{
+    display: block;
+    position: absolute;
+    margin-left: 70%;
+    top: 80px;
+    width: 400px;
+    background-color: white;
+    z-index: 10;
+}
+
+.cart-container{
+    display: none;
+}
+
+/* #c_cart_card2:hover + .cart-container{
+    display: block;
+} */
+
+/* Nav Bar */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    height: 80px;
+}
+
+.yummy-logo{
+    height: 50px;
+}
+
+.navbar{
+    margin-left: 12%;
+    margin-right: 12%;
+    color: black;
+}
+ 
+.logo-text{
+    color: #3d4152;
+    margin: 15%;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+}
+
+.help, .user, .offers{
+    color: #3d4152;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 5px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    padding-right: 0px;
+}
+
+.nav-link{
+    margin-left: 50px;
+}
+
