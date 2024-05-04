@@ -49,12 +49,12 @@
               <div>
                 <img
                   class="login-page-thumbnail inline-text"
-                  src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
+                  src="./images/Image-login_btpq7r.avif"
                   alt=""/>
               </div>
             </div>
             <!-- login-->
-            <form class="needs-validation" action="home.html" novalidate>
+            <form class="needs-validation" action="home.html">
               <div class="form-floating mb-3">
                 <input type="tel" pattern="^[7-9]\d{9}$" class="form-control" id="validationCustom01" placeholder="Phone number" required>
                 <label class="validationCustom01" for="validationCustom01">Phone number</label>
@@ -85,12 +85,12 @@
                   <div>or <span class="login-text"><button class="login-btn" onclick="openLogin()">login to your account</button></span></div>
                 </div>
                 <div>
-                  <img class="login-page-thumbnail inline-text" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt=""/>
+                  <img class="login-page-thumbnail inline-text" src="./images/Image-login_btpq7r.avif" alt=""/>
                 </div>
               </div>
             </div>
           <!-- Sign up -->
-          <form class="needs-validation" action="home.html" novalidate>
+          <form class="needs-validation" action="home.html">
             <div class="form-floating mb-3">
               <input type="tel" pattern="^[6-9]\d{9}$" class="form-control" id="validationCustom01" placeholder="Phone number" required>
               <label class="validationCustom01" for="validationCustom01">Phone number</label>
@@ -127,25 +127,27 @@
         </main>
 
         <!-- landing page -->
-        <h1 class="words" id="word">Hungry?</h1>
+        <div class="homeText">
+          <h1 class="words" id="word">Hungry?</h1>
         <h2>Order food from favourite restaurants near you.</h2>
         <br />
         <br />
+        </div>
+        
         <div class="location">
-          <form action="" name="myForm">
-          <input type="text" id="locate" class="inp" placeholder="Enter your delivery location" name="text" oninvalid="validateForm(this);" 
-          oninput="validateForm(this);" required/>
-<!--           <button class="bttn1" >
+          
+          <input type="text" id="locate" class="inp" placeholder="Enter your delivery location" name="text" required/>
+          <button class="bttn1" >
             <i class="fa-solid fa-location-crosshairs"></i> Locate Me
-          </button> -->
+          </button>
           <!-- <button id="submit" class="btn2" onclick="return validateInput()"><a href="">FIND FOOD</a></button> -->
           <input type="submit" value="FIND FOOD" id="submit" class="btn2" >
-        </form>
+       
         </div>
         <br />
-        <h3>POPULAR CITIES IN INDIA</h3>
+        <h3 style="align-self: flex-start; padding-left: 30px;">POPULAR CITIES IN INDIA</h3>
         <br />
-        <ul class="city">
+        <ul class="city" style="align-self: flex-start; padding-left: 30px;">
           <li class="odd">Ahmedabad</li>
           <li class="even">Bangalore</li>
           <li class="odd">Chennai</li>
@@ -161,7 +163,7 @@
       </div>
       <div class="photo">
         <img
-          src="https://cdnb.artstation.com/p/assets/images/images/019/003/189/large/ankit-kashyap-chole-bhature.jpg?1561580848"
+          src="./images/homepage.jpg"
           alt=""
           class="homepagePhoto"/>
       </div>
@@ -204,11 +206,17 @@
           all-new Swiggy app.
         </h2>
         <br /><br />
-        <img src="./images/googleplay_swiggy.webp" alt="" />
-        <img src="./images/app_store_iOS_swiggy.webp" alt="" />
+        <div class="rest-images1">
+          <img src="./images/googleplay_swiggy.webp" alt="" />
+          <img src="./images/app_store_iOS_swiggy.webp" alt="" />
+        </div>
+        
       </div>
-      <img src="./images/mobile_pixel_swiggy.webp" alt="" class="img1" />
-      <img src="./images/iPhone_swiggy.webp" alt="" class="img2" />
+      <div class="rest-images">
+        <img src="./images/mobile_pixel_swiggy.webp" alt="" class="img1" />
+        <img src="./images/iPhone_swiggy.webp" alt="" class="img2" />
+      </div>
+     
     </div>
 
     <div class="footer">
