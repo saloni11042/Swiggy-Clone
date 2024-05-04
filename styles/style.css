@@ -1,22 +1,39 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    width: 98vw;
+}
 .main{
+ width: 100%;
     display: flex;
     justify-content: space-between;
 }
 .main .left{
+    width: 50%;
+  display: flex;
     margin-top: 77px;
+    flex-direction: column;
+    align-items: center;
+}
+.main .photo{
+    width: 50%;
 }
 .main .left nav img{
     width: 10%;
     height: 70%;
 }
-.logo{
+nav{
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+nav .bttn{
+  display: flex;
 }
 .head-title{
     color: #fc8019;
@@ -53,14 +70,13 @@
 }
 .homepagePhoto{
     height: 100%;
-    width: 45vw;
-    margin-left: 70px;
+    width: 100%;
 }
 .main .left{
-    margin-left: 130px;
     margin-top: 50px;
 }
 .left h1{
+    width: 100%;
     font-size: 43px;
 }
 .left p{
@@ -68,17 +84,26 @@
     font-size: 22px;
 }
 .left h2{
+    width: 100%;
     opacity: 0.4;
 }
 .left h3{
     color: #93959f;
     font-size: 14px;
 }
-.left .location{
-    display: flex;
+.homeText{
+    padding-left: 30px;
+    padding-right: 20px;
 }
-.left .location input{
-    width: 330px;
+.location{
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.location input{
+    width: 100%;
     height: 62px;
     border: 1px solid rgba(21, 21, 21, 0.597) ;
     border-right: none;
@@ -94,7 +119,7 @@ input::placeholder {
     
 }
 .left .location .bttn1{
-    width: 120px;
+    width: 30%;
     background-color: transparent;
     border: none;
     font-size: 14px;
@@ -103,22 +128,14 @@ input::placeholder {
     border-right: none;
     height: 62px;
     font-weight: bold;
-    margin-left: -5px;
     padding-bottom: 1px;
 }
-/* .left .location .bttn1:hover{
-  background-color: gray;
-  opacity: 0.2;
-  color: black;
-  z-index: 0;
-} */
 .left .location .btn2{
-    width: 120px;
+    width: 35%;
     background-color: #fc8019;
     border: none;
     font-size: 18px;
     height: 62px;
-    margin-left: -4px;
     padding-bottom: 4px;
     padding-right: 10px;
     color: white;
@@ -144,25 +161,18 @@ input::placeholder {
 .card1 .crd p{
     color: #e0cbc1;
 }
+
 .rest{
     display: flex;
-    justify-content: flex;
     justify-content: space-around;
     margin: 0 90px;
-    height: 75vh;
 }
 .rest img{
-    width: 60%;
+    width: 49%;
 }
-.rest .img1{
-    margin-bottom: 50px;
-}
-.rest .img2{
-    margin-top: 66px;
-}
-.rest .text{
-    margin-top: 84px;
-    margin-right: 91px;
+.rest-images1{
+    display: flex;
+    gap: 5px;
 }
 .rest .text h1{
     font-size: 34px;
@@ -175,14 +185,12 @@ input::placeholder {
     opacity: 0.4;
 }
 .rest .text img{
-    margin-top: 22px;
     width: 180px;
-    margin-left: -5px;
-    margin-right: 4px;
 }
+
+
 .footer{
     display: flex;
-    justify-content: center;
     justify-content: space-around;
     color: white;
     background-color: black;
@@ -255,6 +263,7 @@ footer{
 .h-ruler{
   margin: 0;
 }
+
 /* loginpage */
 
 .login-page-thumbnail{
@@ -293,10 +302,13 @@ footer{
     margin-top: 40px;
   }
   .login-page-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
   }
   .login-page-thumbnail{
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .login-page-btn{
     background-color: #fc8019;
@@ -357,57 +369,6 @@ footer{
   margin-left: 1px;
 }
 
-  /*
-
-  
- 
-
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: transparent;
-  }
- 
-
- 
- 
-  .animate {
-    
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform:translateX(35vw) }
-    to {-webkit-transform:translateX(0vw)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: translateX(35vw)} 
-    to {transform: translateX(0vw)}
-  } 
-
-  .animate-reverse{
-    -webkit-animation: animateclose 0.6s;
-    animation: animateclose 0.6s
-  }
-  @-webkit-keyframes animateclose {
-    from {-webkit-transform:translateX(0vw) }
-    to {-webkit-transform:translateX(35vw)}
-  }
-    
-  @keyframes animateclose {
-    from {transform: translateX(0vw)} 
-    to {transform: translateX(35vw)}
-  } 
-
-
-*/
-
-
-
-
-
 
 /* signup page */
   .signup-page-main{
@@ -444,17 +405,17 @@ footer{
 }
 
   #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2; 
+    cursor: pointer; 
   }
   .referral-code a{
     text-decoration: none;
@@ -463,41 +424,38 @@ footer{
   }
 
 
-  /*.animate {
-    
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+  @media screen and (max-width:670px){
+    .main{
+        display: block;
+    }
+  .main .left{
+    width: 100%;
+    display: flex;
+      margin-top: 77px;
+      flex-direction: column;
+      margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
   }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform:translateX(35vw) }
-    to {-webkit-transform:translateX(0vw)}
+  .main .photo{
+width: 100%;
   }
-    
-  @keyframes animatezoom {
-    from {transform: translateX(35vw)} 
-    to {transform: translateX(0vw)}
-  } 
-
-  .animate-reverse{
-    -webkit-animation: animateclose 0.6s;
-    animation: animateclose 0.6s
+  .card1{
+    flex-wrap: wrap;
   }
-  @-webkit-keyframes animateclose {
-    from {-webkit-transform:translateX(0vw) }
-    to {-webkit-transform:translateX(35vw)}
+  .rest{
+    flex-wrap: wrap;
+    gap: 50px;
   }
-    
-  @keyframes animateclose {
-    from {transform: translateX(0vw)} 
-    to {transform: translateX(35vw)}
-  } 
-
- */
-
-
-
- /* home-page */
- .home-logo{
-  
- }
+  .footer{
+    flex-wrap: wrap;
+  }
+  footer{
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .symbol ul{
+    margin-left: -43px;
+  }
+}
